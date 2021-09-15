@@ -1,0 +1,27 @@
+{
+  "name": "tsdoist",
+  "version": "1.0.0",
+  "description": "a typescript wrapper around the todoist rest api",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "start": "./node_modules/.bin/ts-node src/index.ts",
+    "prepublish": "./node_modules/.bin/tsc",
+    "build": "./node_modules/.bin/tsc",
+    "build:check": "./node_modules/.bin/tsc --noEmit"
+  },
+  "license": "ISC",
+  "author": "Soren Williams <soren@aethre.co>",
+  "dependencies": {
+    "node-fetch": "^2.6.2",
+    "ts-node": "^10.2.1",
+    "uuid": "^8.3.2",
+    "zod": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.2",
+    "@types/node-fetch": "^2.5.12",
+    "@types/uuid": "^8.3.1",
+    "typescript": "^4.4.3"
+  }
+}
