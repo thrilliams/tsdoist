@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { URL } from 'url';
+import { URL } from 'whatwg-url';
 import { v4 as uuidv4 } from 'uuid';
 
 export class RequestHandler {
