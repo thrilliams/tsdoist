@@ -12,21 +12,12 @@ export class Todoist {
         this.handler = new RequestHandler(token, endpoint);
     }
 
-    /**
-     * Returns JSON-encoded array containing all user projects.
-     * @returns {Promise<Project[]>}
-     */
     async getProjects(): Promise<Project[]> {
         let json = await this.handler.get('projects');
         let projects = Project.array().parse(json);
         return projects;
     }
 
-    /**
-     * 
-     * @param options {ProjectCreateOption}
-     * @returns 
-     */
     async createProject(options: ProjectCreateOptions): Promise<Project> {
         let json = await this.handler.post('projects', ProjectCreateOptions.parse(options));
         let project = Project.parse(json);
